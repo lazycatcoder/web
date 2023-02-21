@@ -1,0 +1,101 @@
+body {
+  background-color: #474a56;
+}
+
+h1 {
+  display: block;  
+  font-family: "Open Sans";
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  color: orange;
+  margin: 20px auto;
+}
+
+.nav {
+  display: block;
+  text-align: center;
+}
+
+.btn {
+  width: 100px;
+  max-width: 100px;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 12px 25px;
+  margin: 5px;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: scale(0.9);
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+.infinite-carousel {
+  width: 600px;
+  height: 120px;
+  display: block;
+  background-color: #e8e8e8;
+  position: relative;
+  justify-content: center;
+  margin: 10px auto;
+  border-radius: 5px;
+  box-shadow: 0px 0px 12px 0px #000000;
+  overflow: hidden;
+}
+
+.carousel-block {
+  width: auto;
+  height: 94px;
+  display: inline-block;
+  position: relative;
+  float: left;
+  flex-shrink: 0;
+  background: #9c9c9c;
+  border-radius: 5px;
+  margin: 13px 0px 13px 0px;
+}
+
+p {
+  display: block;
+  position: relative;
+  font-size: 24px;
+  text-align: center;
+  align-items: center;
+  vertical-align: center;
+}
+
+.orange {
+  background: orange;
+}
+
+.carousel-wrapper {
+  position: relative;
+  left: 50%;
+  overflow: hidden; 
+  transform: translateX(-50%);
+}
+
+.carousel-items {
+  width: 10000px;
+  position: relative;
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
