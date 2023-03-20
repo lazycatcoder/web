@@ -6,6 +6,10 @@ window.onload = (function() {
     $("input[id='phone_number']").val('');
 }); 
 
+$(window).on('pageshow', function() {
+    $('#phone_number')[0].reset();
+});
+
 
 $(document).ready(function() {
 
@@ -196,7 +200,7 @@ $(document).ready(function() {
             '\uD83E[\uDD10-\uDDFF]'
         ];
             
-        $('#phone_number').on('keydown keyup change', function() {
+        $('#phone_number').on('input keydown keyup change', function() {
             removeInvalidChars();
         });
         
@@ -207,8 +211,18 @@ $(document).ready(function() {
         }
     });
 
+    // event handler on form submission
+    $('form').on('submit', function(e) {
+        if (!validateLength()) {
+            e.preventDefault(); // cancel form submission if validation fails
+        }
+        else if (!validateNumber()) {
+            e.preventDefault(); // cancel form submission if validation fails
+        }
+    });
 
-    //check validation
+
+    // check validation
     $('#phone_number').on('blur keyup change', function(){
         validateLength();
         validateNumber();

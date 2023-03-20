@@ -6,6 +6,10 @@ window.onload = (function() {
   $("input[id='email']").val('');
 }); 
 
+$(window).on('pageshow', function() {
+  $('#email')[0].reset();
+});
+
 
 $(document).ready(function() {
   // global var
@@ -425,7 +429,7 @@ $(document).ready(function() {
           '\uD83E[\uDD10-\uDDFF]'
       ];
           
-      $('#email').on('keydown keyup change', function() {
+      $('#email').on('input keydown keyup change', function() {
           removeInvalidChars();
       });
       
@@ -434,6 +438,13 @@ $(document).ready(function() {
           str = str.replace(new RegExp(ranges.join('|'), 'ug'), '');
           $('#email').val(str);
       }
+  });
+
+  // event handler on form submission
+  $('form').on('submit', function(e) {
+    if (!validateEmail()) {
+      e.preventDefault(); // cancel form submission if validation fails
+    }
   });
 
 
