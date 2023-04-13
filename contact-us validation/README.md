@@ -2,3 +2,9 @@
 <p align="center" >
     <a href="https://codepen.io/lazycatcoder/pen/QWVJNEo">Preview</a>
 </p>
+
+<br>
+
+<p align="center">
+  <img src="img.jpg" width=500px/>
+</p>

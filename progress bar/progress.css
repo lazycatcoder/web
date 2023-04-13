@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #474a56;
+}
+
+.wrapper {
+  margin: 50px auto 0px;
+  position: relative;
+  height: 150px;
+}
+
+.progress-bar {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  margin: 50px auto 0;
+}
+
+.progress {
+  max-height: 650px;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 100px);
+  top: calc(50% - 100px);
+  width: 200px;
+  height: 200px;
+  clip: rect(0, 200px, 200px, 100px);
+}
+
+.progress-bar.next-part {
+  background-color: #eaee00;
+}
+
+.next-part .progress {
+  clip: rect(0, 100px, 200px, 0);
+}
+
+.next-part .progress .progress-fill {
+  clip: rect(0, 200px, 200px, 100px);
+  background: #ffffff;
+}
+
+.progress .progress-fill {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 100px);
+  top: calc(50% - 100px);
+  width: 200px;
+  height: 200px;
+  clip: rect(0, 100px, 200px, 0);
+  background: #eaee00;
+  transform: rotate(60deg);
+}
+
+.percents {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 173.9130434783px/2);
+  top: calc(50% - 173.9130434783px/2);
+  width: 173.9130434783px;
+  height: 173.9130434783px;
+  background: #474a56;
+  text-align: center;
+  display: table;
+}
+
+.percents-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.percents span {
+  display: block;
+  font-size: 2.6em;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+#complete{
+  display: flex;
+  color:#eaee00;
+  font-size: larger;
+  text-transform: uppercase;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+button {
+  display: block;
+  position: relative;
+  font-family: "Poppins";
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  background-color: #ffffff;
+  color: #474a56;
+  border: none;
+  outline: none;
+  top: 110px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0px auto 150px;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.9);
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
