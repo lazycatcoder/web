@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  
+  <body>
+    <div class="captcha-container">
+      <h2 class="title">Captcha Generator</h2>
+      
+      <div class="display">
+          <div id="captcha-display"></div>      
+      </div>
+
+      <div class="result">
+        <input type="text" id="captcha-input" placeholder="Enter Captcha">
+      </div>
+
+      <div class="settings">    
+        <span>settings</span>
+      
+        <div class="setting">
+            <input type="checkbox" id="number" checked>Numbers
+            <label for="number"></label>
+        </div>
+      
+        <div class="setting"> 
+            <input type="checkbox" id="uppercase">Uppercase
+            <label for="uppercase"> </label>
+        </div>
+      
+        <div class="setting">   
+            <input type="checkbox" id="lowercase">Lowercase
+            <label for="lowercase"></label>
+        </div>
+      </div>
+
+      <div class="slider">
+        <label for="captcha-length">Length: <span id="captcha-length-value">4</span></label>
+  
+        <div class="range">
+          <span>4</span>
+          <input type="range" id="captcha-length" min="4" max="16" step="1" value="4">
+          <span>16</span>
+        </div>
+      </div>
+  
+      <div class="btns">
+        <button id="refresh-btn">Generate</button>
+        <button id="clear-btn">Clear</button>
+        <button id="submit-btn">Submit</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
